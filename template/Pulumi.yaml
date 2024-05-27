@@ -1,0 +1,3 @@
+name: scalify
+runtime: 
+  name: scala

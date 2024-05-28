@@ -6,14 +6,11 @@ import sttp.model.Part
 import sttp.tapir.server.jdkhttp.*
 import sttp.tapir.server.interceptor.cors.CORSInterceptor
 import sttp.tapir.generic.auto.*
-import java.util.concurrent.{Executors} //, Semaphore}
-import java.util.concurrent.ConcurrentHashMap
+import java.util.concurrent.Executors
 import java.io.File
 
 object Http:
   case class CreateSiteRequest(subdomain: String, content: String)
-
-  // val upSemaphore = Semaphore(1)
 
   private val index =
     endpoint.get
@@ -26,8 +23,6 @@ object Http:
       .in(formBody[CreateSiteRequest])
       .out(htmlBodyUtf8)
       .handle { form =>
-        // upSemaphore.acquire()
-
         try
           Auto(cfg.pulumiAccessToken)
             .deploy(form.subdomain, form.content)
@@ -36,7 +31,6 @@ object Http:
             .left
             .map(e => scribe.error(e))
         finally ()
-        // upSemaphore.release()
       }
 
   def startServer()(using cfg: Config) =

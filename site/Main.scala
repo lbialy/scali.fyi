@@ -236,7 +236,7 @@ import besom.cfg.Struct
             spec = PodSpecArgs(
               containers = ConfiguredContainerArgs(
                 name = "app",
-                image = "ghcr.io/lbialy/scalify:0.0.6",
+                image = "ghcr.io/lbialy/scalify:0.0.9",
                 configuration = Struct(
                   port = appContainerPort,
                   pulumiAccessToken = pulumiAccessToken,

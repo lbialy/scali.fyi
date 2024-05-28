@@ -10,7 +10,7 @@ RUN microdnf install gzip && \
 
 ENV PATH="/root/.pulumi/bin:$PATH"
 
-RUN pulumi plugin install language scala 0.3.1 --server github://api.github.com/VirtusLab/besom
+RUN pulumi plugin install language scala 0.4.0-SNAPSHOT --server github://api.github.com/VirtusLab/besom
 
 COPY app.main /app/main
 

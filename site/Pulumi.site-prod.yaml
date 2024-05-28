@@ -1,0 +1,6 @@
+config:
+  scalify:cloudflare_token:
+    secure: AAABAG0H3IkppKajogS2KA/iP7GyZLZwQzseJgKYp8dyH7ccUyVByZMUlLV53YB9gzMBRxQvw3Op/M6s4X8Mm26hpKWBPijj
+  scalify:cloudflare_zone_id: 3eb4f475a5bf4ff3f932dcfdec0d3ad1
+  scalify:pulumi_access_token:
+    secure: AAABABU7+x5LOwLF+VLvkhUitRLGwqM4Hafw0dDkZzz+SEtTb4BvJzgYIY0xtFXWVLjH46wuu50WPzuB1QmaVv86wQZhIReDp0cT9A==

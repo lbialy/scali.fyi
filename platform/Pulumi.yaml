@@ -1,0 +1,5 @@
+name: scalify
+runtime: scala
+description: scalify static site hosting platform
+config:
+    pulumi:disable-default-providers: ["kubernetes"]

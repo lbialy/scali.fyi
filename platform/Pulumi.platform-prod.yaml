@@ -1,0 +1,8 @@
+encryptionsalt: v1:C+D3eJuISbw=:v1:OUFbRa5GpR7IpzxB:sWu0h62tCYW6Qr4cIN/hSD5Gi5bbdQ==
+config:
+  scalify:github_pull_token:
+    secure: v1:kUL6vWwEhIhpiemZ:M3YLW7TWxskFz1eeDpgy3WUMhwOn2Opxz5ax+l/lnU7yu0+6G/SOr/MDfPM/YLQ9Vi0bRaQH2VE=
+  scalify:hetzner_token:
+    secure: v1:dof41tSKWHjAq/dr:2oZTq5Z2TCkZDuMyWop+stOIcUMmAjFBouTyjX0CfT3VasomePWJO142tSnv1Fg85OUAwPAnE0+hG6vKh/43CUqJx/t7Heqi956EuGFar/E=
+  scalify:ssh_private_key_path: /Users/lbialy/.ssh/id_vlab_ed25519
+  scalify:ssh_public_key_path: /Users/lbialy/.ssh/id_vlab_ed25519.pub

@@ -23,14 +23,12 @@ object Http:
       .in(formBody[CreateSiteRequest])
       .out(htmlBodyUtf8)
       .handle { form =>
-        try
-          Auto(cfg.pulumiAccessToken)
-            .deploy(form.subdomain, form.content)
-            .map(sd => Templates.response(s"Site created at <a href=\"https://$sd.scali.fyi\">$sd.scali.fyi</a>!"))
-            .tap(_ => scribe.info(s"Deployed ${form.subdomain}.scali.fyi"))
-            .left
-            .map(e => scribe.error(e))
-        finally ()
+        Auto(cfg.pulumiAccessToken)
+          .deploy(form.subdomain, form.content)
+          .map(sd => Templates.response(s"Site created at <a href=\"https://$sd.scali.fyi\">$sd.scali.fyi</a>!"))
+          .tap(_ => scribe.info(s"Deployed ${form.subdomain}.scali.fyi"))
+          .left
+          .map(e => scribe.error(e))
       }
 
   def startServer()(using cfg: Config) =
